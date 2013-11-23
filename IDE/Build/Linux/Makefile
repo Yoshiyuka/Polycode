@@ -15,9 +15,9 @@ debug:
 	mkdir -p ./Build
 	$(CC) $(CFLAGS) -g main.cpp $(SRCS) -o ./Build/Polycode $(LDFLAGS_DEBUG)
 	cp -R ../../Contents/Resources/* Build/
-	cp ../../../Debug/Linux/Framework/Core/Assets/default.pak Build/
-	cp ../../../Debug/Linux/Framework/Core/Assets/hdr.pak Build/
-	cp -R ../../../Debug/Linux/Standalone Build
+	cp ../../../Release/Linux/Framework/Core/Assets/default.pak Build/
+	cp ../../../Release/Linux/Framework/Core/Assets/hdr.pak Build/
+	cp -R ../../../Release/Linux/Standalone Build
 
 clean:
 	rm -rf ./Build
