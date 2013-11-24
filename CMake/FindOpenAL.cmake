@@ -1,7 +1,6 @@
 SET(OPENAL_SEARCH_PATHS
     ${POLYCODE_RELEASE_DIR}/Framework/Core/Dependencies/lib
-    ${POLYCODE_RELEASE_DIR}/Framework/Core/Dependencies/include
-    ${POLYCODE_RELEASE_DIR}/Framework/Modules/Dependencies/lib
+    ${POLYCODE_RELEASE_DIR}/Framework/Core/Dependencies/include/AL
     )
 
 SET(MSVC_YEAR_NAME)
@@ -18,7 +17,7 @@ ELSEIF(MSVC_VERSION GREATER 1199)
 ENDIF()
 
 FIND_PATH(OPENAL_INCLUDE_DIR
-    NAMES openal.h
+    NAMES al.h alc.h alext.h efx-creative.h efx-presets.h efx.h
     HINTS
     $ENV{OPENALDIR}
     $ENV{OPENAL_PATH}
